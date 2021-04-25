@@ -1,4 +1,4 @@
-package com.proyectoperfildeprorgramador.model.dao;
+package com.example.demo.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Pais")
+@Table(name = "pais")
 public class Pais {
 	
 	@Id
@@ -35,5 +35,5 @@ public class Pais {
 	}
 	
 	
-	
+
 }
