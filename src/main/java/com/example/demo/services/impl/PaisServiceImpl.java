@@ -29,12 +29,23 @@ public class PaisServiceImpl implements PaisService{
 
 	@Override
 	public Pais registrar(PaisDTO paisDTO) {
-		return null;
+		
+		Pais pais = new Pais();
+		pais.setName(paisDTO.getName());
+		
+		return pais;
 	}
 
 	@Override
 	public Pais modificar(PaisDTO paisDTO) {
-		return null;
+		
+		Pais pais = new Pais();
+		pais = paisRepository.findById(paisDTO.getId()).orElse(null);
+		
+		pais.setName(paisDTO.getName());
+		pais.setId(paisDTO.getId());
+		
+		return pais;
 	}
 
 	@Override
